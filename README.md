@@ -2,9 +2,7 @@
 Mi Portafolio de projectos como desarrollador web/ My projects Portafolio as a web developer
 
 
-<!DOCTYPE html>
-<html>
-  <head>
+
     <img
     src="https://images.pexels.com/photos/17517619/pexels-photo-17517619/free-photo-of-punto-de-referencia-entrenar-arboles-vaso.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     alt="Descripción de la imagen" width: 800px; height: 800px; />
