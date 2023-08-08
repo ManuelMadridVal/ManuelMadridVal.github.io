@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <link>
+    <title>Mi Página Web de Digimon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+      .card-img-top:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+      }
+    </style>
+  </link>
+  
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Mundo Digimon, colección de tus Digimon favoritos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://youtube.com/" id="Inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Final">Final</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://youtube.com/" id="Contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+
+
+
+
+
+    <div class="container">
+      <h1>Bienvenido al mundo de Digimon</h1>
+      <p>Puedes ver cada Digimon en nuestra colección:</p>
+      <div class="row" id="digimon-list"></div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $.getJSON(
+          "https://digimon-api.vercel.app/api/digimon",
+          function (data) {
+            var digimonList = "";
+            $.each(data, function (key, value) {
+              digimonList +=
+                "<div class='col-md-3'><div class='card' style='margin-top: 15px;'><img class='card-img-top' src='" +
+                value.img +
+                "' alt='" +
+                value.name +
+                "'><div class='card-body'><h5 class='card-title'>" +
+                value.name +
+                "</h5><p class='card-text'>Level: " +
+                value.level +
+                "</p></div></div></div>";
+            });
+            $("#digimon-list").append(digimonList);
+          }
+        );
+      });
+    </script>
+
+<div class="cards-container"></div>
+
+
+
+<ul>
+    <li><a href="#Inicio">Inicio</a></li>
+    <li><id="Final" href="#Final" id="Final"></id="Final"></li>
+</ul>
+
+
+  </body>
+</html>
+
