@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eport - Plataforma de Información de Vuelos</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bienvenido a la plataforma Eport</h1>
+      <p>
+        Aquí podrá encontrar la información de vuelos más reciente en nuestro
+        aeropuerto.
+      </p>
+
+      <div class="flight-info">
+        <h2>Hora: <span id="current-time"></span></h2>
+        <h2>Fecha: <span id="current-date"></span></h2>
+        <h2>El vuelo más próximo:</h2>
+        <p>Número de vuelo: <span id="flight-number"></span></p>
+        <p>Terminal: <span id="terminal"></span></p>
+      </div>
+    </div>
+
+    <div class="notification">
+      <p id="notification-message"></p>
+      <button id="close-button">Cerrar</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
